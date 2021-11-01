@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'vinding-machine-apps'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B5FBCDEBE1A5438FAF9CFD9FAC042EC0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C8E8914FF3764FFA979A3866DD88B96A }}
           package: .
