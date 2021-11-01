@@ -1,2 +1,2 @@
 # Vending-Machine
-This is Vending Machine app
+This is Vending Machine apps
