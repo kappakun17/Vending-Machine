@@ -53,6 +53,7 @@ function buttonInput(number){
         numberView.value += number
     }else{
         alert("最大2文字までです。")
+        numberView.value = ""
     }
     
 }
@@ -60,13 +61,17 @@ function buttonInput(number){
 function heritageView(){
     value = numberView.value
     if(value === ""){
-        heritageViewbar.value = "" 
+        numberView.value = ""
+        heritageViewbar.value = ""
+        alert("その番号は登録されてません。0から"+ heritageList.length + "の中で選んでください。")
     }else{
         if(value <= heritageList.length){
             let currentObj = getInstance(value)
             heritageViewbar.value = currentObj.name 
         }else{
-            heritageViewbar.value = "" 
+            numberView.value = ""
+            heritageViewbar.value = ""
+            alert("その番号は登録されてません。0から"+ heritageList.length + "の中で選んでください。") 
         }
          
     }
@@ -99,7 +104,6 @@ for(let buttonId of buttonIdList){
     button.addEventListener("click",function(){
         buttonInput(button.innerHTML)
         heritageView()
-
     })
 
 }
@@ -111,7 +115,7 @@ oneCharDeleteButton.addEventListener("click",function(){
 
 deleteButton.addEventListener("click",function(){
     numberView.value = ""
-    heritageView()
+    heritageViewbar.value = ""
 })
 
 submitButton.addEventListener("click",function(){
@@ -122,12 +126,13 @@ submitButton.addEventListener("click",function(){
     if(0 < value && value <= heritageList.length ){
         changeInformation(value,attribute)
         numberView.value = ""
-        heritageView()
+        heritageViewbar.value = ""
+
         
     }else{
         alert("その番号は登録されてません。0から"+ heritageList.length + "の中で選んでください。")
         numberView.value = ""
-        heritageView()
+        heritageViewbar.value = ""
     }
 
     submitButton.setAttribute("submit-number",value)
