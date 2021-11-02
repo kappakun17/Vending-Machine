@@ -63,7 +63,7 @@ function heritageView(){
     if(value === ""){
         numberView.value = ""
         heritageViewbar.value = ""
-        alert("その番号は登録されてません。0から"+ heritageList.length + "の中で選んでください。")
+        alert("その番号は登録されてません。1から"+ heritageList.length + "の中で選んでください。")
     }else{
         if(value <= heritageList.length){
             let currentObj = getInstance(value)
@@ -71,7 +71,7 @@ function heritageView(){
         }else{
             numberView.value = ""
             heritageViewbar.value = ""
-            alert("その番号は登録されてません。0から"+ heritageList.length + "の中で選んでください。") 
+            alert("その番号は登録されてません。1から"+ heritageList.length + "の中で選んでください。") 
         }
          
     }
@@ -130,7 +130,7 @@ submitButton.addEventListener("click",function(){
 
         
     }else{
-        alert("その番号は登録されてません。0から"+ heritageList.length + "の中で選んでください。")
+        alert("その番号は登録されてません。1から"+ heritageList.length + "の中で選んでください。")
         numberView.value = ""
         heritageViewbar.value = ""
     }
