@@ -111,6 +111,10 @@ for(let buttonId of buttonIdList){
 oneCharDeleteButton.addEventListener("click",function(){
     let value = numberView.value;
     numberView.value = value.slice("0","-1")
+    if (value.length === 1){
+        heritageViewbar.value = "";
+    }
+    
 })
 
 deleteButton.addEventListener("click",function(){
